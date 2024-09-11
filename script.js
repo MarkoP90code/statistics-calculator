@@ -14,7 +14,7 @@
 //In this challenge, you will build a statistics calculator that takes a set of numbers and returns the mean, median, mode, standard deviation, and variance.
 
 //1.    OVDE RADIM TAKO D SVE BUDE VEZANO ZA BROJEVE A NE ZA STRING POSTO CU TRAZITI SREDNJE VREDNOSTI I STA VEC, A TO MOGU SAMO SA BROJEVIMA.
-const calculate = () => {       //U html-u je pozvana ova funkcija na form elementu.
+window.calculate = function() {       //U html-u je pozvana ova funkcija na form elementu.
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);                 //Valjda je ovo u zagradi RegEx. Pravi split gde je "," i iza zareza prazno mesto tj. razmak (\s) ili ne mora biti razmak jer "*" znaci nula ili vise ponavljanja. Znaci pravi split gde je "," ili ", " ili ",  " itd. Da sam imao sve ovo okruzeno sa [] onda bi drugacije bilo.   Objasnjenje ima ovde https://www.w3schools.com/python/python_regex.asp#:~:text=A%20RegEx%2C%20or%20Regular%20Expression,contains%20the%20specified%20search%20pattern.
     const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));    //Ovo je ona dva ispod spojena.
